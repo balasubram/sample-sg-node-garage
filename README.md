@@ -1,5 +1,12 @@
 ## samplesgnodegarage
 
+To create this sample app, run the command ``` ibmcloud dev create ``` and choose webapp and nodejs option.
+
+The sample is downloaded and committed to GIT. On top of the code, integration with DB2 service is implemented. Continuous deployment and continuous delivery is created and integerated with GIThub Commits
+
+
+##### Documentation from the Sample Code is given below
+
 React Web project with ExpressJS on NodeJS
 
 [![](https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg)](https://bluemix.net)
@@ -24,6 +31,8 @@ The React web starter contains an opinionated set of components for modern web d
 
 React is a framework for creating user interfaces in modular components.
 
+
+
 <a name="enablement"></a>
 ### IBM Cloud Enablement
 
@@ -35,9 +44,7 @@ React is a framework for creating user interfaces in modular components.
 
 #### IBM Cloud development tools setup (optional)
 
-1. Install [IBM Cloud Developer Tools](https://console.bluemix.net/docs/cli/idt/setting_up_idt.html#add-cli) on your machine  
-2. Install the plugin with: `bx plugin install dev -r bluemix`
-
+Install [IBM Cloud Developer Tools](https://console.bluemix.net/docs/cli/idt/setting_up_idt.html#add-cli) on your machine  
 
 #### IBM Cloud DevOps setup (optional)
 
@@ -46,8 +53,6 @@ React is a framework for creating user interfaces in modular components.
 [IBM Cloud DevOps](https://www.ibm.com/cloud-computing/bluemix/devops) services provides toolchains as a set of tool integrations that support development, deployment, and operations tasks inside IBM Cloud. The "Create Toolchain" button creates a DevOps toolchain and acts as a single-click deploy to IBM Cloud including provisioning all required services. 
 
 ***Note** you must publish your project to [Github](https://github.com/) for this to work.
-
-
 
 <a name="configuration"></a>
 ### Configuration
@@ -110,7 +115,18 @@ When deploying to production, it is best practice to configure sessions to be st
 #### Using IBM Cloud development CLI
 To build and debug your app, run:
 ```bash
-bx dev build --debug
-bx dev debug
+ibmcloud dev build --debug
+ibmcloud  dev debug
 ```
 
+To set CF as deployment cloud
+```
+bash
+ibmcloud target --cf
+```
+
+To deploy to IBM Cloud CF
+
+``` bash
+ibmcloud cf push
+```
