@@ -9,7 +9,7 @@ module.exports = function (app) {
   var env = JSON.parse(process.env.VCAP_SERVICES);
   var db2 = env['dashDB For Transactions'][0].credentials;
 
-  const connString = "DRIVER={DB2};DATABASE=" + db2.database + ";UID=" + db2.username + ";PWD=" + db2.password + ";HOSTNAME=" + db2.host + ";port=" + db2.port;
+  const connString = "DRIVER={DB2};DATABASE=" + db2.db + ";UID=" + db2.username + ";PWD=" + db2.password + ";HOSTNAME=" + db2.host + ";port=" + db2.port;
 
   router.get('/', function (req, res, next) {
     let query = "SELECT * FROM transaction ORDER BY trans_id ASC FETCH FIRST 1000 ROWS ONLY"; // query database to get all the players
