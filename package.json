@@ -17,6 +17,7 @@
     "test": "nyc mocha --exit",
     "dev": "nf --procfile Procfile-dev --port 3000 start",
     "build": "webpack --progress --config webpack.prod.js",
+    "build-dev": "npm run build",
     "postinstall": "npm run build",
     "lint": "eslint src",
     "client-reload": "webpack-dev-server --host 0.0.0.0  --history-api-fallback --progress --inline --config webpack.dev-standalone.js",
@@ -34,7 +35,12 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "log4js": "^4.0.2",
-    "ibm-cloud-env": "^0"
+    "ibm-cloud-env": "^0",
+    "ag-grid-community": "^20.0.0",
+    "ag-grid-react": "^20.0.0",
+    "ibm_db": "2.5.0",
+    "fetch": "1.1.0",
+    "node-sass": "^4.8.3"
   },
   "devDependencies": {
     "nodemon": "^1.12.1",
